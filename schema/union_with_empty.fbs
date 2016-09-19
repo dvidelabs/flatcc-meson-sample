@@ -1,0 +1,10 @@
+namespace UnionWithEmpty;
+table RequestSomething {}
+table Something { thing:uint; }
+union MessageContents {RequestSomething, Something}
+table Message {
+    to:[uint] (required);
+    from:uint;
+    contents:MessageContents (required);
+}
+root_type Message;
