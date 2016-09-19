@@ -3,8 +3,9 @@ dependency of a small C program that builds flatbuffers. This works by
 using the Meson build system which is a more userfriendly CMake/Ninja
 style build system with a sort of built-in package management.
 
-This project depends on the `meson` branch of flatcc which is currently
-experimental.
+This project depends on the [meson branch of
+flatcc](https://github.com/dvidelabs/flatcc/tree/meson)
+which is currently experimental.
 
 We use a the user provided test case for
 [flatcc issue 4](https://github.com/dvidelabs/flatcc/issues/4) as an
@@ -33,11 +34,11 @@ dependencies with very little setup.
 
 To test dependencies, try
 
-    ninja -C build
-    # <nothing to build>
-    thouch schema/*.fbs
-    ninja -C build
-    # linking app
+    $ ninja -C build
+    nothing to build
+    $ thouch schema/*.fbs
+    $ ninja -C build
+    linking app
 
 Note that this also works with schema files that include other schema
 files as is the case in the main flatcc `monster_test` project, but here
@@ -65,18 +66,17 @@ but is ignored by our parent git repo. The flatcc project is built in
 the build dir and does not touch subprojects after being fetched.
 
 Build times on 4 core i7, 2,2GHz, Ninja/Clang/MacOS
-(after fetching flatcc source into subprojects and cleaning build dir)
 
 To set up a new project after cloning this repo, but without having
 fetched flatcc yet:
 
-time ./setup-build.sh
-        4.10 real         5.53 user         1.29 sys
+    $ time ./setup-build.sh
+            4.10 real         5.53 user         1.29 sys
 
 The above primarily measures the time it takes to clone the flatcc repo
 via meson.
 
-Build times broken down after initial clone of flatcc.
+Build times broken down after the initial clone of flatcc.
 
     $ rm -rf build/*
 
