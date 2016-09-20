@@ -17,6 +17,8 @@ ensure the git url and revision is up to date.
 Dependencies: C compiler tool chain, git, ninja-build,
 python3, and [meson 0.34.0+](https://github.com/mesonbuild/meson).
 
+The setup-build.sh discussed below will fetch meson if not installed.
+
 Note: By design Meson only depends on core python3 libraries and can be
 run from source checked out via github.
 

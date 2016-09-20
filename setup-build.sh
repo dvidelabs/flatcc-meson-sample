@@ -2,8 +2,8 @@
 
 cd $(dirname $0)
 set -e
-
+MESON=$(./get-meson.sh)
 rm -rf build
 mkdir build
-meson.py build
+$MESON build
 ninja -C build test
