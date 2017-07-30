@@ -15,7 +15,7 @@ To get started, please inspect the `subprojects/flatcc.wrap` file to
 ensure the git url and revision is up to date.
 
 Dependencies: C compiler tool chain, git, ninja-build,
-python3, and [meson 0.34.0+](https://github.com/mesonbuild/meson).
+python3, and [meson 0.41.0+](https://github.com/mesonbuild/meson).
 
 The setup-build.sh discussed below will fetch meson if not installed.
 
