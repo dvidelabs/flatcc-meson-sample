@@ -1,4 +1,4 @@
 [wrap-git]
 directory=flatcc
 url=https://github.com/dvidelabs/flatcc.git
-revision=v0.4.3-pre-meson
+revision=v0.4.3-meson
